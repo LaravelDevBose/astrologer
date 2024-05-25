@@ -1,0 +1,384 @@
+.wrap-1 h1{
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family: 'Bebas', sans-serif;
+}
+.container{
+  max-width: 1200px;
+}
+.yellow-span{
+  color: #e5b202 !important;
+}
+h1{
+  font-size: 2.5rem !important;
+  font-family: 'Bebas', sans-serif;
+  font-weight: 700 !important;
+  line-height: 1;
+  text-transform: capitalize;
+}
+
+.text-right{
+    text-align: right;
+}
+.wrap-1 .zordic {
+    background-image:url('../img/slide-bg.jpeg.webp')
+}
+.wrap-1 .zordic span{
+    color: white;
+}
+hr{
+    color: gray;
+}
+p{
+    font-size: 20px;
+}
+.wrap-1 hr{
+  border: 1px solid #eee;
+}
+.wrap-2 .capsule-wraper{
+    display: flex;
+    flex-wrap: wrap;
+}
+.wrap-2 h2{
+  font-size: 1.75rem !important;
+}
+.wrap-1{
+  padding:10px ;
+}
+.wrap-1 picture{
+  padding: 10px;
+}
+.wrap-1 span {
+  font-size: 0.85rem;
+  font-family: 'Bebas', sans-serif;
+  
+}
+div.text-right{
+  padding: 5px 2px 5px 2px;
+}
+.col-lg-2{
+  max-width: 161px;
+  padding: 10px;
+}
+
+
+#daily{
+background-color: #E5B202;
+/* padding: 18px 10px; */
+/* border-radius: 100px; */
+/* width: 200px; */
+/* text-align: center; */
+display: flex;
+padding: 10px 0;
+border-radius: 100px;
+margin-right: 5px;
+width: 140px !important;
+}
+#daily a{
+  text-transform: uppercase;
+  color: white;
+  font-family: 'Bebas', sans-serif;
+  font-weight: 700;
+  font-size: 18px !important;
+
+}
+.wrap-2 img{
+  width: 18px;
+  margin: 0 8px;
+}
+
+#love{
+  display: flex;
+  background-color: #A65484;
+   padding: 10px 30px;
+border-radius: 100px;
+margin-right: 5px;
+width: 140px !important;
+margin-right: 5px ;
+
+}
+#love a{
+  text-transform: uppercase;
+  color: white;
+  font-family: 'Bebas', sans-serif;
+  font-weight: 700;
+  font-size: 18px !important;
+}
+
+#career{
+    background-color: #295A90;
+}
+.money{
+    background-color:  #299047;
+}
+#health{
+    background-color: #CC711F;
+}
+
+#sex{
+    background-color:  #8E2990;;
+}
+#chinese{
+    background-color: #902929;
+}
+#video{
+    background-color:  #7D7D7D;
+}
+#weekly{
+    background-color:  #29907C;
+}#monthly{
+    background-color: #000000;;
+}
+#weekly{
+    background-color:  #293E90;;
+}
+.wrap-4 .horoscope h3{
+    padding: 20px 0;
+    border-radius: 50px;
+    background-color: rgb(71, 47, 133);
+
+    color: white;
+    text-align: center;
+}
+
+.wrap-7 .horoscope{
+    padding: 20px 0;
+    border-radius: 50px;
+    background-color: rgb(71, 47, 133);
+    width: 70%;
+    margin: auto;
+
+    color: white;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+}
+.wrap-8 .horscope strong{
+    padding: 20px 0;
+    border-radius: 50px;
+    background-color: rgb(71, 47, 133);
+
+    color: white;
+    text-align: center;
+    display: block;
+    width: 60%;
+    font-size: 24px;
+    margin: 50px auto;
+}
+
+h1,
+h2 {
+  color: #150e1f;
+}
+.blue{
+    background-color:  #472f85;
+    text-align: center;
+    color: white;
+    padding: 1.2rem 0;
+    border-radius: 30px;
+    font-weight: lighter;
+    width: 70%;
+    margin: 30px auto;
+   
+}
+.wrap-7 .horoscope a{
+  font-size: 0.9rem;
+  color: white;
+}
+.aries{
+  background-color:  #472f85;
+  text-align: center;
+  color: white;
+  padding: 1.2rem 0;
+  border-radius: 30px;
+  font-weight: lighter;
+  width: 100%;
+  margin: 30px auto;
+}
+.aries h4{
+  font-size: 0.9rem !important;
+  color: white;
+}
+.blue h3{
+  margin: 0 !important;
+}
+.capability h2{
+  color: white;
+;
+
+}
+.wrap-9 a{
+  font-size: 20px !important;
+}
+.wrap-6 li , .wrap-8 li{
+  font-size: 20px !important;
+  margin-bottom: 10px ;
+}
+.woman-aries-wraper, .man-aries-wraper{
+  display: block;
+  margin: auto;
+}
+
+.blue h3{
+  color: white;
+}
+.aries-horscope{
+  font-size: 0.9rem;
+}
+.pages a{
+  font-size: 18px;
+}
+header{
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+p {
+  font-size: 20px;
+}
+.wrap-4 a{
+  font-size: 18px !important;
+}
+h2 {
+  font-size: 1.5rem;
+  line-height: 1;
+  font-weight: bold;
+  font-family: 'Bebas', sans-serif;
+}
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+.wrap-1 li{
+  padding: 10px 0;
+}
+nav ul{
+  display: flex;
+  flex-grow: 1;
+  width: 100%;
+  justify-content: end;
+}
+h3 {
+  font-weight: bold;
+}
+
+/* layout */
+
+header {
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+header {
+  background: linear-gradient(to right, #FA7936, #9900EB);
+}
+header a:hover {
+  color: wheat;
+}
+.wrap-1 a {
+  color: white;
+  text-decoration: none;
+  padding: 0 10px;
+}
+.elementor-section {
+  display: flex;
+  align-items: center;
+  padding: 0 50px;
+}
+.elementor-section .row {
+  background: linear-gradient(to right, #FA7936, #9900EB);
+  border-radius: 20px !important;
+}
+.elementor-section img {
+  height: 284px;
+}
+.align p a {
+  text-decoration: none;
+}
+.align p a:hover {
+  text-decoration: underline;
+}
+.img-items {
+  height: 250px;
+  position: relative;
+}
+.border{
+    border-radius: 2px solid gray;
+}
+.elementor-heading {
+  background: linear-gradient(to right, #FA7936, #9900EB);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  padding: 0 10px;
+}
+.dropdown-menu{
+    background: linear-gradient(to right, #FA7936, #9900EB);
+    color: white;
+    /* width: 250px !important; */
+}
+.dropdown-menu li a{
+    font-size: 13px;
+}
+.elementor-heading a {
+  text-decoration: none;
+  color: white;
+}
+.elementor-heading .fa{color: white;}
+
+.capsule{
+    border-radius: 50px;
+}
+.capsule a{
+    color: white;
+}
+.first-capsule{
+    background-color: #E5B202;
+}
+.justify-content-between{
+    justify-content: space-around;
+}
+.card{
+    margin: auto    ;
+}
+
+ a{
+  font-size: 27px;
+  letter-spacing: 1px;
+}
+
+
+.dropdown-menu{
+    width: 50%;
+}
+
+footer{
+    background-color:#f5deb341;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+footer li a{
+  color: black;
+  font-size: 20px;
+}
+@media only screen and (max-width: 980px){
+  .section-div img{
+    width: 100px;
+  }
+  footer{
+   text-align: center;
+  }
+  footer .col-lg-3{
+   margin: 40px 0;
+  }
+ 
+}
+.font-size{
+   font-size: 12px;
+}
+
+

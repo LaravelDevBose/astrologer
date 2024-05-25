@@ -1,0 +1,28 @@
+.wrap-2 h1{
+    font-size: 2.5rem;
+    font-family: 'Bebas',sans-serif;
+    font-weight: 700;
+    margin-top: 20px;
+}
+.wrap-2 .banner{
+    background-image: url(https://www.astrologyanswers.com/wp-content/uploads/2022/03/solar-planets-astrology.jpeg.webp);
+    background-size: cover;
+}
+.wrap-2 .banner h2{
+    padding: 20px 0;
+   
+        border-bottom: 2px solid #f3f4f6;
+        padding-bottom: 0.5rem !important;
+  
+}
+.wrap-3 a , .wrap-5 a, .elementor-post__read-more{
+    color:  #4169e1 !important;
+}
+.wrap-4 a{
+    color: #A65484 !important;
+}
+.wrap-5 h3{
+    font-size: 1.5em;
+    font-family: 'Bebas',sans-serif;
+    font-weight: 700;
+}

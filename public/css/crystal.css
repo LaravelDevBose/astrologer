@@ -1,0 +1,177 @@
+h1,
+h2 {
+  color: #150e1f;
+}
+.blue{
+    background-color:  #472f85;
+    text-align: center;
+    color: white;
+    padding: 10px 0;
+    border-radius: 30px;
+    font-weight: lighter;
+}
+.capability h2{
+  color: white;
+;
+
+}
+
+p {
+  font-size: 20px;
+}
+h2 {
+  font-size: 32px;
+  font-weight: bold;
+}
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+.wrap-1 li{
+  padding: 10px 0;
+}
+nav ul{
+  display: flex;
+  flex-grow: 1;
+  width: 100%;
+  justify-content: end;
+}
+h3 {
+  font-weight: bold;
+}
+
+/* layout */
+
+.wrap-1 {
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+.wrap-1 {
+  background-color: #472f85;
+}
+.wrap-1 a:hover {
+  color: wheat;
+}
+.wrap-1 a {
+  color: white;
+  text-decoration: none;
+  padding: 0 10px;
+}
+.elementor-section {
+  display: flex;
+  align-items: center;
+  padding: 0 50px;
+}
+.elementor-section .row {
+  background-color: #472f85;
+  border-radius: 20px !important;
+}
+.elementor-section img {
+  height: 284px;
+}
+.align p a {
+  text-decoration: none;
+}
+.align p a:hover {
+  text-decoration: underline;
+}
+.img-items {
+  height: 250px;
+  position: relative;
+}
+.border{
+    border-radius: 2px solid gray;
+}
+.elementor-heading {
+  background-color: #472f85;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  padding: 0 10px;
+}
+.dropdown-menu{
+    background-color: #472f85;
+    color: white;
+    /* width: 250px !important; */
+}
+.dropdown-menu li a{
+    font-size: 13px;
+}
+.elementor-heading a {
+  text-decoration: none;
+  color: white;
+}
+.elementor-heading .fa{color: white;}
+
+.capsule{
+    border-radius: 50px;
+}
+.capsule a{
+    color: white;
+}
+.first-capsule{
+    background-color: #E5B202;
+}
+.justify-content-between{
+    justify-content: space-around;
+}
+.card{
+    margin: auto    ;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.3rem;
+}
+.figire{
+  width: 100%;
+  margin-top: 20px;
+}
+.list-style li{
+    list-style: disc !important;
+    margin: 10px 0;
+}
+.buy{
+  border-radius: 20px;
+ position: absolute;
+}
+
+.dropdown-menu{
+    width: 50%;
+}
+
+footer{
+    background-color:#f5deb341;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+@media only screen and (max-width: 980px){
+   .section-div img{
+     width: 100px;
+   }
+   footer{
+    text-align: center;
+   }
+   footer .col-lg-3{
+    margin: 40px 0;
+   }
+  
+}
+.font-size{
+    font-size: 12px;
+}
+
+@media only screen and (max-width: 500px){
+    .section-div{
+       display: none;
+    }
+    .capsule, .first-capsule{
+        padding: 0 20px;
+    }
+    
+}

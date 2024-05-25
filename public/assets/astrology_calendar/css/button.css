@@ -1,0 +1,81 @@
+.first{
+    text-align: center;
+    background-color: #E5B202;
+    padding: 16px 0;
+    border-radius: 25px;
+}
+
+.second{
+    text-align: center;
+    background-color: #A65484;
+    padding: 16px 0;
+    border-radius: 25px;
+}
+
+.third{
+    text-align: center;
+    background-color: #295A90;
+    padding: 16px 0;
+    border-radius: 25px;
+}
+.fourth{
+    text-align: center;
+    background-color: #299047;
+    padding: 16px 0;
+    border-radius: 25px;
+}
+.fifth{
+    text-align: center;
+    background-color: #CC711F;
+    padding: 16px 0;
+    border-radius: 25px;
+}
+.sixth{
+    text-align: center;
+    background-color: #8E2990;
+    padding: 16px 0;
+    border-radius: 25px;
+}
+.seven{
+    text-align: center;
+    background-color: #902929;
+    padding: 16px 0;
+    border-radius: 25px;
+}
+.eight{
+    text-align: center;
+    background-color: #7D7D7D;
+    padding: 16px 0;
+    border-radius: 25px;
+}
+.nine{
+    text-align: center;
+    background-color: #29907C;
+    padding: 16px 0;
+    border-radius: 25px;
+}
+.tenth{
+    text-align: center;
+    background-color: #000000;
+    padding: 16px 0;
+    border-radius: 25px;
+}
+.eleven{
+    text-align: center;
+    background-color: #293E90;
+    padding: 16px 0;
+    border-radius: 25px;
+}
+.col-lg-3{
+    padding: 0 5px !important;
+}
+.last{
+    text-align: center;
+}
+.button a{
+    font-size: 18px !important;
+    text-transform: uppercase;
+    font-family: 'Bebas',sans-serif;
+    font-weight: 700;
+    color: white;
+}
