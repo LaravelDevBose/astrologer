@@ -1064,7 +1064,7 @@ html {
 }
 
 .loginContainer {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.345), rgba(0, 0, 0, 0.345)), url("../images/stars-background-new.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.345), rgba(0, 0, 0, 0.345)), url("../../Background.png");
   height: 95vh;
   color: white;
   position: relative;

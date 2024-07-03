@@ -7,47 +7,47 @@ return [
             'date' => 'Mar 21 - Apr 19',
         ],
         'taurus' => [
-            'images' => 'taurus.png.webp',
+            'images' => 'taurus.png',
             'date' => 'Apr 20 - May 20',
         ],
         'gemini' => [
-            'images' => 'gemini.png.webp',
+            'images' => 'gemini.png',
             'date' => 'May 21 - Jun 20',
         ],
         'cancer' => [
-            'images' => 'cancer.png.webp',
+            'images' => 'cancer.png',
             'date' => 'Jun 21 - Jul 22',
         ],
         'leo' => [
-            'images' => 'leo.png.webp',
+            'images' => 'leo.png',
             'date' => 'Jul 23 - Aug 22',
         ],
         'virgo' => [
-            'images' => 'virgo.png.webp',
+            'images' => 'virgo.png',
             'date' => 'Aug 23 - Sep 22',
         ],
         'libra' => [
-            'images' => 'libra.png.webp',
+            'images' => 'libra.png',
             'date' => 'Sep 23 - Oct 22',
         ],
         'scorpio' => [
-            'images' => 'scorpio.png.webp',
+            'images' => 'scorpio.png',
             'date' => 'Oct 23 - Nov 21',
         ],
         'sagittarius' => [
-            'images' => 'sagittarius.png.webp',
+            'images' => 'sagittarius.png',
             'date' => 'Nov 22 - Dec 21',
         ],
         'capricorn' => [
-            'images' => 'capricorn.png.webp',
+            'images' => 'capricorn.png',
             'date' => 'Dec 22 - Jan 19',
         ],
         'aquarius' => [
-            'images' => 'aquarius.png.webp',
+            'images' => 'aquarius.png',
             'date' => 'Jan 20 - Feb 18',
         ],
         'pisces' => [
-            'images' => 'pisces.png.webp',
+            'images' => 'pisces.png',
             'date' => 'Feb 19 - Mar 20',
         ]
     ]

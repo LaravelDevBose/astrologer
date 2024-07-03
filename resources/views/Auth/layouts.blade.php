@@ -5,8 +5,8 @@
 
 <body>
 
-     @include('Front.includes.top_header')
-     @include('Front.includes.header')
+{{--     @include('Front.includes.top_header')--}}
+     @include('Front.includes.navbar')
      @yield('content')
      @include('Front.includes.footer')
 

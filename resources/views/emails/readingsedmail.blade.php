@@ -46,24 +46,22 @@
 </head>
 <body>
   <div class="container">
-    <h1>New User Data</h1>
-    Name: {{ $user['name'] }}
+    <h1>User Reading Data</h1>
+    Name: {{ $readingData['name'] }}
     <br>
-    Email: {{ $user['email'] }}
+    Email: {{ $readingData['email'] }}
     <br>
-    Gender: {{ $user['gender']??'' }}
+    Gender: {{ $readingData['gender'] }}
     <br>
-    Birthdate: {{ $user['birthdate'] }}
+    Sign: {{ $readingData['sign'] }}
     <br>
-    Birth Year: {{ $user['birth_year']??'' }}
+    Birthdate: {{ $readingData['birthdate'] }}
     <br>
-    Birth Time Known: {{ $user['birth_time_know']??'' }}
+    Birth Time: {{ $readingData['birth_time'] }}
     <br>
-    Birth Time: {{ $user['birth_time']??'' }}
+    Country: {{ $readingData['country'] }}
     <br>
-    Country: {{ $user['country']?? '' }}
-    <br>
-    City: {{ $user['city']??'' }}
+    City: {{ $readingData['city'] }}
     <br>
   </div>
 </body>

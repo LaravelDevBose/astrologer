@@ -78,6 +78,8 @@ Route::controller(loginController::class)->group(function() {
 
 //Route::get('index', [HomeController::class, 'index']);
 Route::get('/', [HomeController::class, 'index'])->name('index');
+Route::get('/horoscope-list', [HomeController::class, 'horoscope'])->name('horoscope.index');
+Route::get('/horoscope-reading', [HomeController::class, 'horoscope_reading'])->name('horoscope.reading');
 Route::get('/horoscope/{name}/view',[HomeController::class,'detailHoroscope'])->name('horescope');
 Route::get('dream-interpretation/', [HomeController::class, 'dreamshow'])->name('dreamshow');
 Route::get('methods-of-divination/', [HomeController::class, 'diviation'])->name('diviation');
@@ -90,7 +92,7 @@ Route::get('methods-of-divination/', [HomeController::class, 'diviation'])->name
 
    Route::get('chinese-zodiac/{slug}', [FrontChineseZodiacController::class, 'chineseZodiac'])->name('chinese-zodiac');
 
-   Route::get('astrology-calendar/{month}',[FrontCalendarController::class,'index']);
+   Route::get('astrology-calendar/{month}',[FrontCalendarController::class,'index'])->name('astrology-calendar');
 
    Route::get('planets/',[FrontPlanetController::class,'index']);
 
@@ -123,6 +125,7 @@ Route::get('/horoscope/{slug}', [HomeController::class, 'GetHoroscopeCategory'])
 Route::get('/compability/{slug}', [HomeController::class, 'GetCompabilityCategory'])->name('compability');
 Route::get('/horoscope', [PersonalizedHoroscopeController::class, 'showForm'])->name('showHoroscopeForm');
 Route::post('/horoscope/submit', [PersonalizedHoroscopeController::class, 'submitForm'])->name('submitHoroscopeForm');
+Route::post('/horoscope-reading/submit', [PersonalizedHoroscopeController::class, 'submitHoroscopeReading'])->name('submit.horoscope.reading');
 Route::post('/submithomepersonalform', [PersonalizedHoroscopeController::class, 'submitForm'])->name('submithomepersonalform');
 Route::get('/Article/{slug?}', [HomeController::class, 'GetArticle'])->name('Article');
 Route::get('/Articles/{slug?}', [HomeController::class, 'GetArticleByCategory'])->name('Articles');

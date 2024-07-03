@@ -17,7 +17,15 @@ class HomeController extends Controller
 {
 
     use Common;
+
     public function index()
+    {
+        $data = array();
+        $data = $this->headerData(); // Call trait method
+        $data['pages'] = DB::table('pages')->where('pagename', 'home')->first();
+        return view('Front.pages.home', compact('data'));
+    }
+    public function horoscope()
     {
         $data = array();
         $data = $this->headerData(); // Call trait method
@@ -47,7 +55,16 @@ class HomeController extends Controller
 
         $zodics = config('global.zodics');
         // dd($data);
-        return view('Front.pages.home', compact('data','zodics'));
+        return view('Front.pages.horoscope-list', compact('data','zodics'));
+    }
+
+    public function horoscope_reading()
+    {
+        $zodics = config('global.zodics');
+        $data = array();
+        $data = $this->headerData(); // Call trait method
+        $data['pages'] = DB::table('pages')->where('pagename', 'home')->first();
+        return view('Front.pages.horoscope_reading', compact('zodics', 'data'));
     }
 
     public function termandcondition()
