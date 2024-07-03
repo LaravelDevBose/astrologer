@@ -19,6 +19,7 @@ class AdminController extends Controller
         ]);
 
         if(auth()->guard('admin')->attempt(['email' => $request->input('email'),  'password' => $request->input('password')])){
+//        if(auth()->guard('admin')->loginUsingId(1)){
             $user = auth()->guard('admin')->user();
            // if($user->is_admin == 1){
                 return redirect()->route('adminDashboard')->with('success','You are Logged in sucessfully.');

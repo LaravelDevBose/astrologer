@@ -302,7 +302,7 @@ class HomeController extends Controller
     public function GetArticleByCategory($slug= '')
     {
 
-    if($slug == 'All'){
+    if($slug == 'All' || $slug == 'all'){
 
     $data = $this->headerData(); // Call trait method
     $data['article'] = DB::table('horoscope')->select(DB::raw('(SELECT horoscopecategory.title
@@ -312,6 +312,32 @@ class HomeController extends Controller
     WHERE horoscopecategory.id = horoscopecate_id limit 1) as categoryslug'),'thumbImage','slug'
     ,'title'
     ,'createdBy','created_at','excerpt')->get();
+
+
+
+        $data['artcle'] = DB::table('horoscope')->select(DB::raw('(SELECT horoscopecategory.title
+        FROM horoscopecategory
+        WHERE horoscopecategory.id = horoscopecate_id limit 1) as categorytitle'),DB::raw('(SELECT horoscopecategory.slug
+        FROM horoscopecategory
+        WHERE horoscopecategory.id = horoscopecate_id limit 1) as categoryslug'),'thumbImage','slug'
+            ,'title'
+            ,'createdBy','created_at','excerpt')->where('type', 2)->where('horoscopecate_id', 15)
+            ->offset(0)->limit(6)->orderBy('id', 'desc')->get();
+        $data['tarot'] = DB::table('horoscope')->select(DB::raw('(SELECT horoscopecategory.title
+        FROM horoscopecategory
+        WHERE horoscopecategory.id = horoscopecate_id limit 1) as categorytitle'),DB::raw('(SELECT horoscopecategory.slug
+        FROM horoscopecategory
+        WHERE horoscopecategory.id = horoscopecate_id limit 1) as categoryslug'),'thumbImage','slug'
+            ,'title'
+            ,'createdBy','created_at','excerpt')->where('type', 2)->where('horoscopecate_id', 16)->offset(0)->limit(4)->orderBy('id', 'desc')->get();
+        $data['love'] = DB::table('horoscope')->select(DB::raw('(SELECT horoscopecategory.title
+        FROM horoscopecategory
+        WHERE horoscopecategory.id = horoscopecate_id limit 1) as categorytitle'),DB::raw('(SELECT horoscopecategory.slug
+        FROM horoscopecategory
+        WHERE horoscopecategory.id = horoscopecate_id limit 1) as categoryslug'),'thumbImage','slug'
+            ,'title'
+            ,'createdBy','created_at','excerpt')->where('type', 2)->where('horoscopecate_id', 17)->offset(0)->limit(4)->orderBy('id', 'desc')->get();
+
     return view('Front.pages.article', compact('data'));
 
 

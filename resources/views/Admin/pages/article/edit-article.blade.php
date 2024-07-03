@@ -57,7 +57,7 @@
         <select class="form-select mb-3" name="articlecate_id" aria-label="Default select example">
         <option selected>Select Category</option>
         @foreach($horoscopeCategory as $datas)
-        <option selected="@if($data->articlecate_id==$datas->id) {{'selected'}}  @endif" value="{{$datas->id}}">{{$datas->title}}</option>
+        <option {{($data->horoscopecate_id==$datas->id) ? 'selected': ''}}  value="{{$datas->id}}">{{$datas->title}}</option>
         @endforeach
         </select>
         </div>

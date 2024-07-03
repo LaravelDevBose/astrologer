@@ -52,7 +52,7 @@
             <div class="close-btn"> <button>  <i class="fas fa-times"></i> </button> </div>
             <a href="{{ route('index') }}" class="{{ request()->routeIs('index')? 'active': '' }}">Home</a>
             <a href="{{ route('horoscope.index') }}" class="{{ request()->routeIs('horoscope.index')? 'active': '' }}">Horoscope</a>
-            <a href="{{ route('Articles', ['slug'=>'Astrology']) }}" class="{{ request()->routeIs('Articles')? 'active': '' }}">Articles</a>
+            <a href="{{ route('Articles', ['slug'=>'All']) }}" class="{{ request()->routeIs('Articles')? 'active': '' }}">Articles</a>
             <a href="{{ route('astrology-calendar', ['month'=> 'January']) }}" class="{{ request()->routeIs('astrology-calendar')? 'active': '' }}">Astrology</a>
         </div>
     </div>
@@ -73,7 +73,7 @@
     <div class="links">
         <a href="{{ route('index') }}" class="{{ request()->routeIs('index')? 'active': '' }}">Home</a>
         <a href="{{ route('horoscope.index') }}" class="{{ request()->routeIs('horoscope.index')? 'active': '' }}">Horoscope</a>
-        <a href="{{ route('Articles', ['slug'=>'Astrology']) }}" class="{{ request()->routeIs('Articles')? 'active': '' }}">Articles</a>
+        <a href="{{ route('Articles', ['slug'=>'All']) }}" class="{{ request()->routeIs('Articles')? 'active': '' }}">Articles</a>
         <a href="{{ route('astrology-calendar', ['month'=> 'January']) }}" class="{{ request()->routeIs('astrology-calendar')? 'active': '' }}">Astrology</a>
         <a href="{{route('aboutus')}}" class="{{ request()->routeIs('aboutus')? 'active': '' }}">About us</a>
         <a href="{{route('contact')}}" class="{{ request()->routeIs('contact')? 'active': '' }}">Contact us</a>

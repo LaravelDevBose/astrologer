@@ -137,7 +137,7 @@
 
         <div class="wrap-5">
         <div class="zodiac-section my-5">
-        <a href="" class="">
+        <a href="{{ route('horoscope.reading') }}" class="">
         <h2 class="">
         Sign up to receive your daily horoscope right to your inbox
         </h2>
