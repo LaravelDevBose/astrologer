@@ -3,7 +3,7 @@
 
 @include('Front.includes.head')
 <body>
-    @include('Front.includes.navbar')
+    @include('Front.includes.old_navbar')
 
     @yield('content')
 

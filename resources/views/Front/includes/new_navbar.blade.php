@@ -17,7 +17,7 @@
                 <i  class="fas fa-times text-white border-2 py-2 px-4 rounded-full" ></i>
             </button>
         </div>
-        <a href="{{ route('index') }}"  class="text-white text-lg font-medium px-4 py-1 rounded transition duration-300 ease-in-out" >Home</a>
+        <a href="{{ route('index') }}"  class="{{ request()->routeIs('index')? 'active': '' }} text-white text-lg font-medium px-4 py-1 rounded transition duration-300 ease-in-out" >Home</a>
         <a href="{{ route('horoscope.index') }}" class="{{ request()->routeIs('horoscope.index')? 'active': '' }} text-white text-lg font-medium px-3 py-1 mx-2 rounded transition duration-300 ease-in-out"  >Horoscope</a>
         <a href="{{ route('Articles', ['slug'=>'All']) }}" class=" {{ request()->routeIs('Articles')? 'active': '' }} text-white text-lg font-medium px-3 py-1 mx-2 rounded transition duration-300 ease-in-out">Articles</a>
         <a href="{{ route('astrology-calendar', ['month'=> 'January']) }}" class="{{ request()->routeIs('astrology-calendar')? 'active': '' }}text-white text-lg font-medium px-3 py-1 mx-2 rounded transition duration-300 ease-in-out">Astrology</a>

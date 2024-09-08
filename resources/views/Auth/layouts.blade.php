@@ -6,7 +6,7 @@
 <body>
 
 {{--     @include('Front.includes.top_header')--}}
-     @include('Front.includes.navbar')
+     @include('Front.includes.old_navbar')
      @yield('content')
      @include('Front.includes.footer')
 
