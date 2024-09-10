@@ -14,7 +14,6 @@
         border-color: #6f42c1;
     }
 </style>
-
 <div class="contactFormContainer container">
     <div class="row justify-content-center">
         <div class="col-md-8 my-5">
@@ -97,5 +96,4 @@
         </div>
     </div>
 </div>
-
 @stop

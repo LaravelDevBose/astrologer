@@ -66,12 +66,12 @@
     </div>
 </div>
 <!-- HERO -->
-<div id="modalBackdrop" class="fixed inset-0 bg-gray-900 bg-opacity-20 hidden z-50">
+<div id="modalBackdrop" class="fixed inset-0 bg-gray-900 bg-opacity-20 hidden z-50 ">
     <!-- Modal content -->
-    <div class="flex items-center justify-center h-full">
-        <div class="bg-white p-6 rounded-lg shadow-lg w-auto mx-2 sm:mx-0">
+    <div class="flex items-center justify-center h-full w-full overflow-auto">
+        <div class="bg-white rounded-lg shadow-lg mx-2 sm:mx-0 py-4 px-1 md:px-4 w-96 sm:w-80 md:w-[52rem] ">
             @include('Front.includes.homeform')
-            <div class="w-full flex justify-center items-center">
+            <div class="w-full flex justify-center items-center mt-4">
                 <button id="closeModal" type="button">Skip</button>
             </div>
         </div>
@@ -93,10 +93,12 @@
     // Function to show the modal
     function showModal() {
         document.getElementById('modalBackdrop').classList.remove('hidden');
+        document.getElementsByTagName('body')[0].classList.add('overflow-hidden');
     }
     // Function to hide the modal
     function hideModal() {
         document.getElementById('modalBackdrop').classList.add('hidden');
+        document.getElementsByTagName('body')[0].classList.remove('overflow-hidden');
     }
     // Show the modal when the page loads
     window.onload = function() {
@@ -108,14 +110,16 @@
 <script>
     const mobileNav = document.getElementById("mobile-nav");
     const navBtn = document.getElementById("mob-nav-btn");
-    const closeBtn = document.querySelector(".close-btn button");
+    const closeBtn = document.querySelector(".close-btn");
 
     closeBtn.addEventListener("click", () => {
-        mobileNav.classList.remove("active");
+        mobileNav.classList.toggle("hidden");
+        mobileNav.classList.toggle("block");
     });
 
     navBtn.addEventListener("click", () => {
-        mobileNav.classList.toggle("active");
+        mobileNav.classList.toggle("hidden");
+        mobileNav.classList.toggle("block");
     });
 </script>
 </body>

@@ -8,7 +8,7 @@
           <p class="font-45-700 text-black font-1">{{$data['pages']->h1}}</p>
 
           <div class="bannerItem">
-            <p class="font-35-700 font-1 text-white title-tag">
+            <p class="font-35-700 font-1 title-tag">
             {{$data['pages']->h2}}
             </p>
           </div>
@@ -22,7 +22,7 @@
           </div>
 
           <div class="bannerItem">
-            <p class="font-35-700 font-1 text-white title-tag">
+            <p class="font-35-700 font-1 title-tag">
             {{$data['pages']->h3}}</p>
           </div>
 
@@ -63,7 +63,7 @@
 
 
           <div class="bannerItem">
-            <p class="font-35-700 font-1 text-white title-tag">{{$data['pages']->h4}}</p>
+            <p class="font-35-700 font-1 title-tag">{{$data['pages']->h4}}</p>
           </div>
 
           <div class="font-20-400 missionVissionCard bg-transparent px-0 mx-auto">
@@ -100,8 +100,6 @@
         </div>
       </div>
     </div>
-
     <!---------------------------------about end------------------------------------------>
-
 
 @stop

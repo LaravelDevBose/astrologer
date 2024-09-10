@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,700&display=swap");
 
 @font-face {
   font-family: "FoglihtenNo06";
@@ -19,7 +19,9 @@ body {
           #81C9F3   /* Right side color */
   );
 }
-
+.font-header{
+  font-family: "Inria Sans", sans-serif;
+}
 
 /* HERO */
 
@@ -222,7 +224,6 @@ body {
 
 .mobile-nav a {
   text-transform: uppercase;
-  color: #fff;
   font-size: 0.8rem;
   margin: 0 0.2rem;
   text-decoration: none;
@@ -349,7 +350,8 @@ body {
 .navbar .links a.active,
 .navbar .links a:hover {
   border: 1.5px solid #fff;
-  border-radius: 30px;
+  border-radius: 30px!important;
+  padding: 1rem!important;
 }
 
 /* MOBILE NAV */
@@ -358,19 +360,23 @@ body {
   transition: all 0.3s ease;
 }
 
-.mobile-nav.active {
+.mobile-nav.block {
   transform: translateX(0);
+}
+
+.mobile-nav.hidden {
+  transform: translateX(100);
 }
 
 .mobile-nav .links a {
   font-size: 1.5rem;
-  padding: 2rem 0;
+  padding: 1rem 0!important;
   width: 100%;
   text-align: center;
 }
 
 .mobile-nav .links a.active {
-  border: 1.5px solid #fff;
+  border: 1.5px solid #393939;
   border-radius: 30px;
   padding: 0.8rem;
 }
@@ -485,4 +491,21 @@ body {
 
 .read-div:hover {
   transform: scale(1.1);
+}
+
+.bg-gradient-custom{
+  background: linear-gradient(
+          to right,
+          #D322F3,  /* Left side color */
+          #81C9F3   /* Right side color */
+  );
+  border-radius: 0 0 20px 20px;
+}
+
+.bg-gradient-custom-tb{
+  background: linear-gradient(
+          #D322F3,  /* Left side color */
+          #81C9F3   /* Right side color */
+  );
+  border-radius: 0 0 20px 20px;
 }

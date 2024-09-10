@@ -1184,9 +1184,9 @@ html {
 
 @media (max-width: 768px) {
   .loginContainer {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.345), rgba(0, 0, 0, 0.345)), url("../images/stars-background-new.jpg");
+    /*background-image: linear-gradient(rgba(0, 0, 0, 0.345), rgba(0, 0, 0, 0.345)), url("../images/stars-background-new.jpg");*/
     height: 80vh;
-    color: white;
+    color: black;
     position: relative;
   }
   .loginContainer #stars {

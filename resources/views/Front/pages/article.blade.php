@@ -2,8 +2,7 @@
 @section('content')
 
     <!----------------articles start-------------------->
-    <div class="kd-content" style="margin-top: 10rem; z-index: 1">
-        <div class="container my-lg-2 text-white">
+        <div class="container my-lg-2 ">
             <div class="row mb-4">
                 <div class="col-md-8">
                     <!--Astrology-->
@@ -11,8 +10,8 @@
                     <div class="box">
                         <p class="font-30-700 my-0 d-flex justify-content-between font-1 ">
                             <span class="font-30-700 font-1  my-0">Astrology</span>
-                            <a href="{{url('Articles/Astrology')}}" class="font-18-700 my-0 text-decoration-none tx-prime" >VIEW ALL
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <a href="{{url('Articles/Astrology')}}" class="font-18-700 my-0 text-decoration-none tx-prime inline-flex">VIEW ALL
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                     <path d="M5 12h13M12 5l7 7-7 7" />
                                 </svg>
                             </a>
@@ -28,14 +27,14 @@
                                             <img src="{{asset('storage/horoscopecategory')}}/{{$artcle->thumbImage}}" class="img-fluid" alt="">
                                         </div>
                                         <div class="para-box">
-                                            <a href="{{url('Articles').'/'.$artcle->slug}}" target="_blank" rel="noopener noreferrer" class="category-tag" style="color: #ffffff!important;">{{$artcle->categorytitle}}</a>
+                                            <a href="{{url('Articles').'/'.$artcle->slug}}" target="_blank" rel="noopener noreferrer" class="category-tag" style="color: #000000!important;">{{$artcle->categorytitle}}</a>
                                             <p class="font-25-700 font-1"><a href="{{url('Article').'/'.$artcle->slug}}">{{$artcle->title}}</a></p>
                                             <p class="font-20-400 tx-ep-7">{!!substr_replace($artcle->excerpt, "...", 200)!!}</p>
 
                                             <div class="detailBox d-flex">
                                                 <div class="icon-box me-3">
                                                     <i class="font-18-600 fa-solid fa-user"></i>
-                                                    <span><a href="http://" target="_blank" rel="noopener noreferrer" style="color: #ffffff!important;">{{$artcle->createdBy}}</a></span>
+                                                    <span><a href="http://" target="_blank" rel="noopener noreferrer" style="color: #000000!important;">{{$artcle->createdBy}}</a></span>
                                                 </div>
                                                 <div class="icon-box">
                                                     <i class="font-18-600 fa-solid fa-calendar"></i>
@@ -60,8 +59,8 @@
                     <div class="box border-top pt-lg-5 pt-3">
                         <p class="font-30-700 my-0 d-flex justify-content-between font-1 ">
                             <span class="font-30-700 font-1  my-0"> Tarot</span>
-                            <a href="{{url('Articles/Tarot')}}" class="font-18-700 my-0 text-decoration-none tx-prime">VIEW ALL
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <a href="{{url('Articles/Tarot')}}" class="font-18-700 my-0 text-decoration-none tx-prime inline-flex">VIEW ALL
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                     <path d="M5 12h13M12 5l7 7-7 7" />
                                 </svg>
                             </a>
@@ -76,14 +75,14 @@
                                         </div>
                                         <div class="para-box px-0">
 
-                                            <a href="{{url('Articles').'/'.$tarot->slug}}" target="_blank" rel="noopener noreferrer" class="category-tag" style="color: #ffffff!important;">{{$tarot->categorytitle}}</a>
+                                            <a href="{{url('Articles').'/'.$tarot->slug}}" target="_blank" rel="noopener noreferrer" class="category-tag" style="color: #000000!important;">{{$tarot->categorytitle}}</a>
                                             <p class="font-25-600 font-1 mb-0">
                                                 <a href="{{url('Article').'/'.$tarot->slug}}">{{$tarot->title}}</a>
                                             </p>
                                             <div class="detailBox d-flex my-1">
                                                 <div class="icon-box me-3">
                                                     <i class="font-18-600 fa-solid fa-user"></i>
-                                                    <span><a href="http://" target="_blank" rel="noopener noreferrer" style="color: #ffffff!important;">{{$tarot->createdBy}}</a></span>
+                                                    <span><a href="http://" target="_blank" rel="noopener noreferrer" style="color: #000000!important;">{{$tarot->createdBy}}</a></span>
                                                 </div>
                                                 <div class="icon-box">
                                                     <i class="font-18-600 fa-solid fa-calendar"></i>
@@ -106,8 +105,8 @@
                     <div class="box border-top pt-lg-5 pt-3">
                         <p class="font-30-700 my-0 d-flex  justify-content-between font-1 ">
                             <span class="font-30-700 font-1  my-0"> Love & Relationships</span>
-                            <a href="{{url('Articles/Love-&-Relationships')}}" class="font-18-700 my-0 text-decoration-none tx-prime">VIEW ALL
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <a href="{{url('Articles/Love-&-Relationships')}}" class="font-18-700 my-0 text-decoration-none tx-prime inline-flex">VIEW ALL
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                     <path d="M5 12h13M12 5l7 7-7 7" />
                                 </svg>
                             </a>
@@ -122,12 +121,12 @@
                                                 <img src="{{asset('storage/horoscopecategory')}}/{{$love->thumbImage}}" class="img-fluid" alt=""></a>
                                         </div>
                                         <div class="para-box px-0">
-                                            <a href="{{url('Articles').'/'.$love->slug}}" target="_blank" rel="noopener noreferrer" class="category-tag" style="color: #ffffff!important;">{{$love->categorytitle}}</a>
+                                            <a href="{{url('Articles').'/'.$love->slug}}" target="_blank" rel="noopener noreferrer" class="category-tag" style="color: #000000!important;">{{$love->categorytitle}}</a>
                                             <p class="font-25-600 font-1 mb-0"><a href="{{url('Article').'/'.$love->slug}}">{{$love->title}}</a></p>
                                             <div class="detailBox d-flex my-1">
                                                 <div class="icon-box me-3">
                                                     <i class="font-18-600 fa-solid fa-user"></i>
-                                                    <span><a href="http://" target="_blank" rel="noopener noreferrer" style="color: #ffffff!important;">{{$love->createdBy}}</a></span>
+                                                    <span><a href="http://" target="_blank" rel="noopener noreferrer" style="color: #000000!important;">{{$love->createdBy}}</a></span>
                                                 </div>
                                                 <div class="icon-box">
                                                     <i class="font-18-600 fa-solid fa-calendar"></i>
@@ -154,7 +153,7 @@
                                         <img src="{{asset('storage/horoscopecategory')}}/{{$article->thumbImage}}" class="img-fluid" alt="">
                                     </div>
                                     <div class="para-box">
-                                        <a href="{{url('Article').'/'.$article->slug}}" target="_blank" rel="noopener noreferrer" class="category-tag text-white">{{$article->categorytitle}}</a>
+                                        <a href="{{url('Article').'/'.$article->slug}}" target="_blank" rel="noopener noreferrer" class="category-tag ">{{$article->categorytitle}}</a>
                                         <p class="font-25-700 font-1">{{$article->title}}</p>
                                         <p class="font-20-400 tx-ep-4">{!!$article->excerpt!!}</p>
 
@@ -264,10 +263,10 @@
                     <div class="socialList mt-4">
                         <p class="font-30-700 my-0 border-bottom">Stay Connected</p>
                         <ul class="list-unstyled">
-                            <li class="font-23-600 my-3 d-flex"> <div class="me-2" style="width: 30px;"><i class="fa-brands fa-facebook-f" style="color: #3e83ec;"></i></div> <a href="#" class="font-1 text-decoration-none text-white">Facebook</a></li>
-                            <li class="font-23-600 my-3 d-flex"> <div class="me-2" style="width: 30px;"><i class="fa-brands fa-twitter" style="color:  #56cce6;"></i></div> <a href="#" class="font-1 text-decoration-none text-white">Twitter</a></li>
-                            <li class="font-23-600 my-3 d-flex"> <div class="me-2" style="width: 30px;"><i class="fa-brands fa-instagram" style="color: #8f59c8;"></i></div> <a href="#" class="font-1 text-decoration-none text-white">Instagram</a></li>
-                            <li class="font-23-600 my-3 d-flex"> <div class="me-2" style="width: 30px;"><i class="fa-brands fa-youtube" style="color: #ed4141;"></i></div> <a href="#" class="font-1 text-decoration-none text-white">YouTube</a></li>
+                            <li class="font-23-600 my-3 d-flex"> <div class="me-2" style="width: 30px;"><i class="fa-brands fa-facebook-f" style="color: #3e83ec;"></i></div> <a href="#" class="font-1 text-decoration-none ">Facebook</a></li>
+                            <li class="font-23-600 my-3 d-flex"> <div class="me-2" style="width: 30px;"><i class="fa-brands fa-twitter" style="color:  #56cce6;"></i></div> <a href="#" class="font-1 text-decoration-none ">Twitter</a></li>
+                            <li class="font-23-600 my-3 d-flex"> <div class="me-2" style="width: 30px;"><i class="fa-brands fa-instagram" style="color: #8f59c8;"></i></div> <a href="#" class="font-1 text-decoration-none ">Instagram</a></li>
+                            <li class="font-23-600 my-3 d-flex"> <div class="me-2" style="width: 30px;"><i class="fa-brands fa-youtube" style="color: #ed4141;"></i></div> <a href="#" class="font-1 text-decoration-none ">YouTube</a></li>
                         </ul>
 
                     </div>
@@ -275,7 +274,6 @@
                 </div>
             </div>
         </div>
-    </div>
     <!----------------articles end------------------------->
 
 @stop

@@ -1,4 +1,4 @@
-<head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="{{asset('/storage/app/public')}}/{{$data['header']->feviconLogo}}">
@@ -12,8 +12,10 @@
     <meta name="developer" content="Brainchild software" />
     <script src="https://kit.fontawesome.com/46102b2060.js" crossorigin="anonymous"></script>
     <script src="https://cdn.ckeditor.com/ckeditor5/40.2.0/classic/ckeditor.js"></script>
-    
+
     <title>Read Your Daily Horoscope! | Krishnaspeaks</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" />
     <style>
         .custom-floating-contact-btn_personalized {
@@ -191,7 +193,7 @@
         }
 
         .font-1 a {
-            color: white !important;
+            color: black !important;
             text-decoration: none;
         }
 
@@ -249,5 +251,21 @@
                 transform: translateY(-20px);
             }
         }
+        body {
+            font-family: "Inria Sans", sans-serif;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            background: #FFFFFF!important;
+            color: #000000;
+        }
+        .navbar{
+            background: linear-gradient(
+                    to right,
+                    #D322F3,  /* Left side color */
+                    #81C9F3   /* Right side color */
+            );
+            border-radius: 0 0 20px 20px;
+        }
     </style>
-</head>
+

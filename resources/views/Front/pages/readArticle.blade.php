@@ -1,7 +1,6 @@
 @extends('Layouts.default')
 @section('content')
 <!---------------------------------articles start------------------------------------------>
-
 <div class="container my-lg-2">
   <div class="row mb-4">
     <div class="col-md-8">
@@ -208,6 +207,5 @@
 
 
 </div>
-
 <!---------------------------------articles end------------------------------------------>
 @stop

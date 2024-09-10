@@ -165,13 +165,13 @@
   font-family: Cyntho Next Slab, 'sans-serif';
   text-align: center;
   line-height: 26px;
-  width: 80%;
   margin: 0 auto 20px auto; }
 @media screen and (max-width: 650px) {
   .content__form .screen p, .main_style p {
     font-size: 14px;
     line-height: 22px;
-    width: 100%; } }
+  }
+}
 @media screen and (max-width: 360px) {
   .content__form .screen p, .main_style p {
     margin: 0 auto 10px auto;
@@ -1430,8 +1430,8 @@ select {
 }
 @media screen and (max-width: 650px) {
   .next {
-    position: fixed;
-    bottom: 5px;
+    position: relative;
+    /*bottom: 35px;*/
   }
 }
 

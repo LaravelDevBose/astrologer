@@ -1,8 +1,7 @@
 @extends('Auth.layouts')
 
 @section('content')
-
-    <div class="loginContainer contanier-fluid">
+    <div class="loginContainer contanier-fluid " style="color: black">
 
     <!-- <div id='stars'></div>
     <div id='stars2'></div>
@@ -33,12 +32,12 @@
                             </div>
                             <div class="form-group mb-3 text-center">
                                 <input type="submit" class="mb-2" value="LOGIN"> 
-                                <a href="#" class="font-16-500 text-center text-white text-decoration-none font-1">Forget your Password?</a>
+                                <a href="#" class="font-16-500 text-center text-decoration-none font-1">Forget your Password?</a>
                             </div>
 
                         <div class="form-group mb-3 text-center">
                             <p>OR</p>
-                            <a href="{{route('register')}}" class="font-16-500 text-center text-white text-decoration-none font-1">Don't have account? <span class="text-decoration-underline font-18-400">Sign up</span></a>
+                            <a href="{{route('register')}}" class="font-16-500 text-center text-decoration-none font-1">Don't have account? <span class="text-decoration-underline font-18-400">Sign up</span></a>
                         </div>
     
                     </form>

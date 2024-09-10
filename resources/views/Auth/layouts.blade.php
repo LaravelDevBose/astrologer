@@ -1,13 +1,17 @@
 <!doctype html>
 <html lang="en">
-
+<head>
    @include('Front.includes.head')
-
+</head>
 <body>
 
 {{--     @include('Front.includes.top_header')--}}
-     @include('Front.includes.old_navbar')
-     @yield('content')
+    <div class="w-11/12 mx-auto overflow-x-hidden">
+        @include('Front.includes.new_navbar')
+    </div>
+    <div class="kd-content" style="margin-top: 10rem; z-index: 1">
+         @yield('content')
+    </div>
      @include('Front.includes.footer')
 
         <!---------------------------------script start------------------------------------------>
@@ -27,5 +31,21 @@
                 }
             }
         </script>
+
+<script>
+    const mobileNav = document.getElementById("mobile-nav");
+    const navBtn = document.getElementById("mob-nav-btn");
+    const closeBtn = document.querySelector(".close-btn");
+
+    closeBtn.addEventListener("click", () => {
+        mobileNav.classList.toggle("hidden");
+        mobileNav.classList.toggle("block");
+    });
+
+    navBtn.addEventListener("click", () => {
+        mobileNav.classList.toggle("hidden");
+        mobileNav.classList.toggle("block");
+    });
+</script>
 </body>
 </html>

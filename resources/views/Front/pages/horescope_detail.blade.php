@@ -46,17 +46,19 @@
                             @if (isset($data['Horoscope']['today']) && $day == 'today')
                                 <div class="getYourHoroscopeCard">
                                     <div class="icon-box" style="background-image: url('{{asset('/assets/images/getHoroscope.png')}}');">
-                                        <svg fill="#ffffff" width="64px" height="64px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
+                                        <svg fill="#000000" width="64px" height="64px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="#000000">
                                             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                             <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                                             <g id="SVGRepo_iconCarrier">
                                                 <path d="M20.808,11.079C19.829,16.132,12,20.5,12,20.5s-7.829-4.368-8.808-9.421C2.227,6.1,5.066,3.5,8,3.5a4.444,4.444,0,0,1,4,2,4.444,4.444,0,0,1,4-2C18.934,3.5,21.773,6.1,20.808,11.079Z"></path>
                                             </g>
                                         </svg>
-                                        <p class="text-white font-25-600"> Love Horoscope</p>
+                                        <p class=" font-25-600"> Love Horoscope</p>
                                     </div>
                                     <div class="para-box">
-                                    <p class="font-20-400 tx-ep-5"> <b>{{ date('M d,Y',strtotime($data['Horoscope']['today']->prediction_date)) }} - </b>  {!! htmlspecialchars($data['Horoscope']['today']->data->prediction->emotions) !!}  </p>
+                                    <p class="font-20-400 tx-ep-5"> <b>{{ date('M d,Y',strtotime($data['Horoscope']['today']->prediction_date)) }} - </b>
+                                        {!! htmlspecialchars($data['Horoscope']['today']->data->prediction->emotions) !!}
+                                    </p>
                                         <div class="btn-box">
                                             <a href="javascript:void(0)" class="text-decoration-none">
                                                 <div class="btn-wrapper">
@@ -69,7 +71,7 @@
                                 </div>
                                 <div class="getYourHoroscopeCard">
                                     <div class="icon-box" style="background-image: url('{{asset('/assets/images/getHoroscope.png')}}');">
-                                      <svg fill="#ffffff" width="50px" height="50px" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                      <svg fill="#000000" width="50px" height="50px" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
                                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                                                 <g id="SVGRepo_iconCarrier">
@@ -77,10 +79,12 @@
                                            </path>
                                             </g>
                                       </svg>
-                                    <p class="text-white font-25-600"> Career Horoscope</p>
+                                    <p class=" font-25-600"> Career Horoscope</p>
                                     </div>
                                     <div class="para-box">
-                                        <p class="font-20-400 tx-ep-5"> <b>{{ date('M d,Y',strtotime($data['Horoscope']['today']->prediction_date)) }} - </b>  {!! $data['Horoscope']['today']->data->prediction->profession !!}  </p>
+                                        <p class="font-20-400 tx-ep-5"> <b>{{ date('M d,Y',strtotime($data['Horoscope']['today']->prediction_date)) }} - </b>
+                                            {!! $data['Horoscope']['today']->data->prediction->profession !!}
+                                        </p>
                                         <div class="btn-box">
                                             <a href="javascript:void(0)" class="text-decoration-none">
                                                 <div class="btn-wrapper">
@@ -93,17 +97,19 @@
                                 </div>
                                 <div class="getYourHoroscopeCard">
                                     <div class="icon-box" style="background-image: url('{{asset('/assets/images/getHoroscope.png')}}');">
-                                       <svg fill="#ffffff" width="50px" height="50px" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                       <svg fill="#000000" width="50px" height="50px" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                             <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                                             <g id="SVGRepo_iconCarrier">
                                       <path d="M464 128h-80V80c0-26.5-21.5-48-48-48H176c-26.5 0-48 21.5-48 48v48H48c-26.5 0-48 21.5-48 48v288c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48V176c0-26.5-21.5-48-48-48zM192 96h128v32H192V96zm160 248c0 4.4-3.6 8-8 8h-56v56c0 4.4-3.6 8-8 8h-48c-4.4 0-8-3.6-8-8v-56h-56c-4.4 0-8-3.6-8-8v-48c0-4.4 3.6-8 8-8h56v-56c0-4.4 3.6-8 8-8h48c4.4 0 8 3.6 8 8v56h56c4.4 0 8 3.6 8 8v48z"></path>
                                         </g>
                                   </svg>
-                                        <p class="text-white font-25-600"> Health Horoscope</p>
+                                        <p class=" font-25-600"> Health Horoscope</p>
                                     </div>
                                     <div class="para-box">
-                                        <p class="font-20-400 tx-ep-5"> <b>{{ date('M d,Y',strtotime($data['Horoscope']['today']->prediction_date)) }} - </b> {!! $data['Horoscope']['today']->data->prediction->health !!}  </p>
+                                        <p class="font-20-400 tx-ep-5"> <b>{{ date('M d,Y',strtotime($data['Horoscope']['today']->prediction_date)) }} - </b>
+                                            {!! $data['Horoscope']['today']->data->prediction->health !!}
+                                        </p>
                                         <div class="btn-box">
                                             <a href="javascript:void(0)" class="text-decoration-none">
                                                 <div class="btn-wrapper">
@@ -116,7 +122,7 @@
                                 </div>
                                 <div class="getYourHoroscopeCard">
                                     <div class="icon-box" style="background-image: url('{{asset('/assets/images/getHoroscope.png')}}');">
-                                            <svg fill="#ffffff" height="64px" width="64px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 375 375" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0">
+                                            <svg fill="#000000" height="64px" width="64px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 375 375" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0">
                                                 </g>
                                                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
                                                 </g>
@@ -126,10 +132,12 @@
                                             </g>
                                             </g>
                                             </svg>
-                                        <p class="text-white font-25-600"> Travel Horoscope</p>
+                                        <p class=" font-25-600"> Travel Horoscope</p>
                                     </div>
                                     <div class="para-box">
-                                        <p class="font-20-400 tx-ep-5"> <b>{{ date('M d,Y',strtotime($data['Horoscope']['today']->prediction_date)) }} - </b> {!! $data['Horoscope']['today']->data->prediction->travel !!}  </p>
+                                        <p class="font-20-400 tx-ep-5"> <b>{{ date('M d,Y',strtotime($data['Horoscope']['today']->prediction_date)) }} - </b>
+                                            {!! $data['Horoscope']['today']->data->prediction->travel !!}
+                                        </p>
                                         <div class="btn-box">
                                             <a href="javascript:void(0)" class="text-decoration-none">
                                                 <div class="btn-wrapper">
@@ -144,17 +152,19 @@
                                 <div class="yesterday-zodic">
                                     <div class="getYourHoroscopeCard">
                                         <div class="icon-box" style="background-image: url('{{asset('/assets/images/getHoroscope.png')}}');">
-                                            <svg fill="#ffffff" width="64px" height="64px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
+                                            <svg fill="#000000" width="64px" height="64px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="#000000">
                                                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                                                 <g id="SVGRepo_iconCarrier">
                                                     <path d="M20.808,11.079C19.829,16.132,12,20.5,12,20.5s-7.829-4.368-8.808-9.421C2.227,6.1,5.066,3.5,8,3.5a4.444,4.444,0,0,1,4,2,4.444,4.444,0,0,1,4-2C18.934,3.5,21.773,6.1,20.808,11.079Z"></path>
                                                 </g>
                                             </svg>
-                                            <p class="text-white font-25-600"> Love Horoscope</p>
+                                            <p class=" font-25-600"> Love Horoscope</p>
                                         </div>
                                         <div class="para-box">
-                                        <p class="font-20-400 tx-ep-5"> <b>{{ date('M d,Y',strtotime($data['Horoscope']['yesterday']->prediction_date)) }} - </b>  {!! htmlspecialchars($data['Horoscope']['yesterday']->data->prediction->emotions) !!}  </p>
+                                        <p class="font-20-400 tx-ep-5"> <b>{{ date('M d,Y',strtotime($data['Horoscope']['yesterday']->prediction_date)) }} - </b>
+                                            {!! htmlspecialchars($data['Horoscope']['yesterday']->data->prediction->emotions) !!}
+                                        </p>
                                             <div class="btn-box">
                                                 <a href="javascript:void(0)" class="text-decoration-none">
                                                     <div class="btn-wrapper">
@@ -167,7 +177,7 @@
                                     </div>
                                     <div class="getYourHoroscopeCard">
                                         <div class="icon-box" style="background-image: url('{{asset('/assets/images/getHoroscope.png')}}');">
-                                            <svg fill="#ffffff" width="50px" height="50px" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                            <svg fill="#000000" width="50px" height="50px" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
                                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                                                 <g id="SVGRepo_iconCarrier">
@@ -175,10 +185,12 @@
                                            </path>
                                             </g>
                                       </svg>
-                                            <p class="text-white font-25-600"> Career Horoscope</p>
+                                            <p class=" font-25-600"> Career Horoscope</p>
                                         </div>
                                         <div class="para-box">
-                                            <p class="font-20-400 tx-ep-5"> <b>{{ date('M d,Y',strtotime($data['Horoscope']['yesterday']->prediction_date)) }} - </b>  {!! $data['Horoscope']['yesterday']->data->prediction->profession !!}  </p>
+                                            <p class="font-20-400 tx-ep-5"> <b>{{ date('M d,Y',strtotime($data['Horoscope']['yesterday']->prediction_date)) }} - </b>
+                                                {!! $data['Horoscope']['yesterday']->data->prediction->profession !!}
+                                            </p>
                                             <div class="btn-box">
                                                 <a href="javascript:void(0)" class="text-decoration-none">
                                                     <div class="btn-wrapper">
@@ -191,17 +203,19 @@
                                     </div>
                                     <div class="getYourHoroscopeCard">
                                         <div class="icon-box" style="background-image: url('{{asset('/assets/images/getHoroscope.png')}}');">
-                                            <svg fill="#ffffff" width="50px" height="50px" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                            <svg fill="#000000" width="50px" height="50px" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                             <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                                             <g id="SVGRepo_iconCarrier">
                                       <path d="M464 128h-80V80c0-26.5-21.5-48-48-48H176c-26.5 0-48 21.5-48 48v48H48c-26.5 0-48 21.5-48 48v288c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48V176c0-26.5-21.5-48-48-48zM192 96h128v32H192V96zm160 248c0 4.4-3.6 8-8 8h-56v56c0 4.4-3.6 8-8 8h-48c-4.4 0-8-3.6-8-8v-56h-56c-4.4 0-8-3.6-8-8v-48c0-4.4 3.6-8 8-8h56v-56c0-4.4 3.6-8 8-8h48c4.4 0 8 3.6 8 8v56h56c4.4 0 8 3.6 8 8v48z"></path>
                                         </g>
                                   </svg>
-                                            <p class="text-white font-25-600"> Health Horoscope</p>
+                                            <p class=" font-25-600"> Health Horoscope</p>
                                         </div>
                                         <div class="para-box">
-                                            <p class="font-20-400 tx-ep-5"> <b>{{ date('M d,Y',strtotime($data['Horoscope']['yesterday']->prediction_date)) }} - </b> {!! $data['Horoscope']['yesterday']->data->prediction->health !!}  </p>
+                                            <p class="font-20-400 tx-ep-5"> <b>{{ date('M d,Y',strtotime($data['Horoscope']['yesterday']->prediction_date)) }} - </b>
+                                                {!! $data['Horoscope']['yesterday']->data->prediction->health !!}
+                                            </p>
                                             <div class="btn-box">
                                                 <a href="javascript:void(0)" class="text-decoration-none">
                                                     <div class="btn-wrapper">
@@ -214,7 +228,7 @@
                                     </div>
                                     <div class="getYourHoroscopeCard">
                                         <div class="icon-box" style="background-image: url('{{asset('/assets/images/getHoroscope.png')}}');">
-                                             <svg fill="#ffffff" height="64px" width="64px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 375 375" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0">
+                                             <svg fill="#000000" height="64px" width="64px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 375 375" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0">
                                                 </g>
                                                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
                                                 </g>
@@ -224,10 +238,12 @@
                                             </g>
                                             </g>
                                             </svg>
-                                            <p class="text-white font-25-600"> Travel Horoscope</p>
+                                            <p class=" font-25-600"> Travel Horoscope</p>
                                         </div>
                                         <div class="para-box">
-                                            <p class="font-20-400 tx-ep-5"> <b>{{ date('M d,Y',strtotime($data['Horoscope']['yesterday']->prediction_date)) }} - </b> {!! $data['Horoscope']['yesterday']->data->prediction->travel !!}  </p>
+                                            <p class="font-20-400 tx-ep-5"> <b>{{ date('M d,Y',strtotime($data['Horoscope']['yesterday']->prediction_date)) }} - </b>
+                                                {!! $data['Horoscope']['yesterday']->data->prediction->travel !!}
+                                            </p>
                                             <div class="btn-box">
                                                 <a href="javascript:void(0)" class="text-decoration-none">
                                                     <div class="btn-wrapper">
@@ -243,17 +259,19 @@
                                     <div class="tomorrow-zodic">
                                         <div class="getYourHoroscopeCard">
                                             <div class="icon-box" style="background-image: url('{{asset('/assets/images/getHoroscope.png')}}');">
-                                                <svg fill="#ffffff" width="64px" height="64px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
+                                                <svg fill="#000000" width="64px" height="64px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="#000000">
                                                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                                     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                                                     <g id="SVGRepo_iconCarrier">
                                                         <path d="M20.808,11.079C19.829,16.132,12,20.5,12,20.5s-7.829-4.368-8.808-9.421C2.227,6.1,5.066,3.5,8,3.5a4.444,4.444,0,0,1,4,2,4.444,4.444,0,0,1,4-2C18.934,3.5,21.773,6.1,20.808,11.079Z"></path>
                                                     </g>
                                                 </svg>
-                                                <p class="text-white font-25-600"> Love Horoscope</p>
+                                                <p class=" font-25-600"> Love Horoscope</p>
                                             </div>
                                             <div class="para-box">
-                                            <p class="font-20-400 tx-ep-5"> <b>{{ date('M d,Y',strtotime($data['Horoscope']['tomorrow']->prediction_date)) }} - </b>  {!! htmlspecialchars($data['Horoscope']['tomorrow']->data->prediction->emotions) !!}  </p>
+                                            <p class="font-20-400 tx-ep-5"> <b>{{ date('M d,Y',strtotime($data['Horoscope']['tomorrow']->prediction_date)) }} - </b>
+                                                {!! htmlspecialchars($data['Horoscope']['tomorrow']->data->prediction->emotions) !!}
+                                            </p>
                                                 <div class="btn-box">
                                                     <a href="javascript:void(0)" class="text-decoration-none">
                                                         <div class="btn-wrapper">
@@ -266,7 +284,7 @@
                                         </div>
                                         <div class="getYourHoroscopeCard">
                                             <div class="icon-box" style="background-image: url('{{asset('/assets/images/getHoroscope.png')}}');">
-                                                <svg fill="#ffffff" width="50px" height="50px" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                                <svg fill="#000000" width="50px" height="50px" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
                                             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                                     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                                                     <g id="SVGRepo_iconCarrier">
@@ -274,10 +292,12 @@
                                             </path>
                                                 </g>
                                         </svg>
-                                                <p class="text-white font-25-600"> Career Horoscope</p>
+                                                <p class=" font-25-600"> Career Horoscope</p>
                                             </div>
                                             <div class="para-box">
-                                                <p class="font-20-400 tx-ep-5"> <b>{{ date('M d,Y',strtotime($data['Horoscope']['tomorrow']->prediction_date)) }} - </b>  {!! $data['Horoscope']['tomorrow']->data->prediction->profession !!}  </p>
+                                                <p class="font-20-400 tx-ep-5"> <b>{{ date('M d,Y',strtotime($data['Horoscope']['tomorrow']->prediction_date)) }} - </b>
+                                                    {!! $data['Horoscope']['tomorrow']->data->prediction->profession !!}
+                                                </p>
                                                 <div class="btn-box">
                                                     <a href="javascript:void(0)" class="text-decoration-none">
                                                         <div class="btn-wrapper">
@@ -290,17 +310,19 @@
                                         </div>
                                         <div class="getYourHoroscopeCard">
                                             <div class="icon-box" style="background-image: url('{{asset('/assets/images/getHoroscope.png')}}');">
-                                                <svg fill="#ffffff" width="50px" height="50px" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                                <svg fill="#000000" width="50px" height="50px" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
                                         <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                                                 <g id="SVGRepo_iconCarrier">
                                         <path d="M464 128h-80V80c0-26.5-21.5-48-48-48H176c-26.5 0-48 21.5-48 48v48H48c-26.5 0-48 21.5-48 48v288c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48V176c0-26.5-21.5-48-48-48zM192 96h128v32H192V96zm160 248c0 4.4-3.6 8-8 8h-56v56c0 4.4-3.6 8-8 8h-48c-4.4 0-8-3.6-8-8v-56h-56c-4.4 0-8-3.6-8-8v-48c0-4.4 3.6-8 8-8h56v-56c0-4.4 3.6-8 8-8h48c4.4 0 8 3.6 8 8v56h56c4.4 0 8 3.6 8 8v48z"></path>
                                             </g>
                                     </svg>
-                                                <p class="text-white font-25-600"> Health Horoscope</p>
+                                                <p class=" font-25-600"> Health Horoscope</p>
                                             </div>
                                             <div class="para-box">
-                                                <p class="font-20-400 tx-ep-5"> <b>{{ date('M d,Y',strtotime($data['Horoscope']['tomorrow']->prediction_date)) }} - </b> {!! $data['Horoscope']['tomorrow']->data->prediction->health !!}  </p>
+                                                <p class="font-20-400 tx-ep-5"> <b>{{ date('M d,Y',strtotime($data['Horoscope']['tomorrow']->prediction_date)) }} - </b>
+                                                    {!! $data['Horoscope']['tomorrow']->data->prediction->health !!}
+                                                </p>
                                                 <div class="btn-box">
                                                     <a href="javascript:void(0)" class="text-decoration-none">
                                                         <div class="btn-wrapper">
@@ -313,7 +335,7 @@
                                         </div>
                                         <div class="getYourHoroscopeCard">
                                             <div class="icon-box" style="background-image: url('{{asset('/assets/images/getHoroscope.png')}}');">
-                                                <svg fill="#ffffff" height="64px" width="64px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 375 375" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0">
+                                                <svg fill="#000000" height="64px" width="64px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 375 375" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0">
                                                     </g>
                                                     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
                                                     </g>
@@ -323,10 +345,12 @@
                                                 </g>
                                                 </g>
                                                 </svg>
-                                                <p class="text-white font-25-600"> Travel Horoscope</p>
+                                                <p class=" font-25-600"> Travel Horoscope</p>
                                             </div>
                                             <div class="para-box">
-                                                <p class="font-20-400 tx-ep-5"> <b>{{ date('M d,Y',strtotime($data['Horoscope']['tomorrow']->prediction_date)) }} - </b> {!! $data['Horoscope']['tomorrow']->data->prediction->travel !!}  </p>
+                                                <p class="font-20-400 tx-ep-5"> <b>{{ date('M d,Y',strtotime($data['Horoscope']['tomorrow']->prediction_date)) }} - </b>
+                                                    {!! $data['Horoscope']['tomorrow']->data->prediction->travel !!}
+                                                </p>
                                                 <div class="btn-box">
                                                     <a href="javascript:void(0)" class="text-decoration-none">
                                                         <div class="btn-wrapper">
