@@ -736,7 +736,7 @@
 .content__form-result.active .screen .result__item.hidden {
   display: none; }
 .content__form-result.active .screen .result__ready {
-  opacity: 0;
+  opacity: 1;
   position: absolute;
   text-align: center;
   margin-bottom: 50px;

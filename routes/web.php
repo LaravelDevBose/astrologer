@@ -125,6 +125,7 @@ Route::get('/horoscope/{slug}', [HomeController::class, 'GetHoroscopeCategory'])
 Route::get('/compability/{slug}', [HomeController::class, 'GetCompabilityCategory'])->name('compability');
 Route::get('/horoscope', [PersonalizedHoroscopeController::class, 'showForm'])->name('showHoroscopeForm');
 Route::post('/horoscope/submit', [PersonalizedHoroscopeController::class, 'submitForm'])->name('submitHoroscopeForm');
+Route::post('/horoscope/home/submit', [PersonalizedHoroscopeController::class, 'submitHomeForm'])->name('submitHomeHoroscopeForm');
 Route::post('/horoscope-reading/submit', [PersonalizedHoroscopeController::class, 'submitHoroscopeReading'])->name('submit.horoscope.reading');
 Route::post('/submithomepersonalform', [PersonalizedHoroscopeController::class, 'submitForm'])->name('submithomepersonalform');
 Route::get('/Article/{slug?}', [HomeController::class, 'GetArticle'])->name('Article');

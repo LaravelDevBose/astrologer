@@ -121,6 +121,54 @@
         mobileNav.classList.toggle("hidden");
         mobileNav.classList.toggle("block");
     });
+
+    $("#floatingFormBtn").click(function(e) {
+        e.preventDefault();
+        let form = $('#floatingForm')[0];
+        submitForm(form);
+    });
+
+    function submitForm(form) {
+        debugger;
+        let data = new FormData(form);
+        $(`#floatingForm`).addClass('hidden');
+        $(`#homeReqFormRes`).addClass('active');
+        $(`#reqToServer`).removeClass('hidden');
+        $(`#reqResponseSuccess`).addClass('hidden');
+        $(`#reqResponseError`).addClass('hidden');
+        $.ajax({
+            url: "{{ route('submitHomeHoroscopeForm') }}",
+            type: "POST",
+            data: data,
+            dataType: "JSON",
+            processData: false,
+            contentType: false,
+            success: function(response) {
+                $(`#reqToServer`).addClass('hidden');
+                if (response.status === 200) {
+                    $(`#reqResponseError`).addClass('hidden');
+                    $(`#reqResponseSuccess`).removeClass('hidden');
+                    $('#resMes').html(response.message)
+                } else {
+                    $(`#reqResponseSuccess`).addClass('hidden');
+                    $(`#reqResponseError`).removeClass('hidden');
+                    $('#errorMsg').html('Something Wrong. Reload and Try again.')
+                }
+            },
+            error: function(xhr, status, error) {
+                $(`#reqToServer`).addClass('hidden');
+                $(`#reqResponseSuccess`).addClass('hidden');
+                if (xhr.status === 422) {
+                    $(`#reqResponseError`).removeClass('hidden');
+                    $('#errorMsg').html(xhr.responseJSON?.message ?? 'Please fill all required fields');
+                } else {
+                    $(`#reqResponseError`).removeClass('hidden');
+                    $('#errorMsg').html('Something Wrong. Reload and Try again');
+                }
+            }
+
+        });
+    }
 </script>
 </body>
 </html>

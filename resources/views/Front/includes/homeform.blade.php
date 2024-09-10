@@ -73,6 +73,7 @@
         </div>
     </div>
     <form action="" class="h-full" id="floatingForm">
+        @csrf
         <div class="content__form-screens">
             <div id="screen_0" class="screen active">
                 <div class="screen_content">
@@ -85,29 +86,29 @@
                         </div>
                         <div style="margin-bottom: 10px">
                             <select name="dob_month" id="dob_month" class="select__month select__date">
-                                <option value="1">January</option>
-                                <option value="2">February</option>
-                                <option value="3">March</option>
-                                <option value="4">April</option>
-                                <option value="5">May</option>
-                                <option value="6">June</option>
-                                <option value="7">July</option>
-                                <option value="8">August</option>
-                                <option value="9">September</option>
+                                <option value="01">January</option>
+                                <option value="02">February</option>
+                                <option value="03">March</option>
+                                <option value="04">April</option>
+                                <option value="05">May</option>
+                                <option value="06">June</option>
+                                <option value="07">July</option>
+                                <option value="08">August</option>
+                                <option value="09">September</option>
                                 <option value="10">October</option>
                                 <option value="11">November</option>
                                 <option value="12">December</option>
                             </select>
                             <select name="dob_day" id="dob_day" class="select__day select__date">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
+                                <option value="01">1</option>
+                                <option value="02">2</option>
+                                <option value="03">3</option>
+                                <option value="04">4</option>
+                                <option value="05">5</option>
+                                <option value="06">6</option>
+                                <option value="07">7</option>
+                                <option value="08">8</option>
+                                <option value="09">9</option>
                                 <option value="10">10</option>
                                 <option value="11">11</option>
                                 <option value="12">12</option>
@@ -252,7 +253,7 @@
                         <img src="{{ asset('assets/form/img/placebirthday.svg') }}" alt="">
                     </div>
                     <div class="form__name simple_form">
-                        <input type="text" placeholder="Birth City" value="" class="text" name="birth_city" id="birth_city">
+                        <input type="text" placeholder="Birth City" value="" class="text" name="city" id="birth_city">
                     </div>
                 </div>
                 <button type="button" class="next" data-event="PlaceofBirth">Next</button>
@@ -304,13 +305,13 @@
                             <img src="{{ asset('assets/form/img/sex_man.svg') }}" alt="" class="choose">
                             <img src="{{ asset('assets/form/img/sex_man-active.svg') }}" alt="" class="active">
                             <p>Male</p>
-                            <input type="radio" id="sex_male" value="1" class="hidden">
+                            <input type="radio" name="gender" id="sex_male" value="1">
                         </label>
                         <label class="sex userSex " for="sex_female" data-sex="2">
                             <img src="{{ asset('assets/form/img/sex_woman.svg') }}" alt="" class="choose">
                             <img src="{{ asset('assets/form/img/sex_woman-active.svg') }}" alt="" class="active">
                             <p>Female</p>
-                            <input type="radio" id="sex_female" value="2" class="hidden">
+                            <input type="radio" name="gender" id="sex_female" value="2">
                         </label>
                     </div>
                     <div class="form__name simple_form">
@@ -339,20 +340,20 @@
             </div>
         </div>
     </form>
-    <div class="content__form-result ">
+    <div class="content__form-result" id="homeReqFormRes">
         <div class="screen">
-            <h2>
-                Preparing your reading </h2>
-            <div class="screen__img">
-                <div class="planet_1"><img src="{{ asset('assets/form/img/planet_1.png') }}" alt="loader_planet"></div>
-                <div class="planet_2"><img src="{{ asset('assets/form/img/planet_2.png') }}" alt="loader_planet"></div>
-                <div class="planet_3"><img src="{{ asset('assets/form/img/planet_3.png') }}" alt="loader_planet"></div>
-                <div class="planet_4"><img src="{{ asset('assets/form/img/planet_4.png') }}" alt="loader_planet"></div>
-            </div>
-            <div class="content__form-result-info">
-                <div class="waitUserData">
+            <div id="reqToServer" class="flex flex-col items-center justify-center hidden">
+                <h2> Preparing your reading </h2>
+                <div class="screen__img">
+                    <div class="planet_1"><img src="{{ asset('assets/form/img/planet_1.png') }}" alt="loader_planet"></div>
+                    <div class="planet_2"><img src="{{ asset('assets/form/img/planet_2.png') }}" alt="loader_planet"></div>
+                    <div class="planet_3"><img src="{{ asset('assets/form/img/planet_3.png') }}" alt="loader_planet"></div>
+                    <div class="planet_4"><img src="{{ asset('assets/form/img/planet_4.png') }}" alt="loader_planet"></div>
                 </div>
-                <div class="result__ready">
+                <p class="loader_text">Please wait a bit. We will compose your horoscope soon. </p>
+            </div>
+            <div class="content__form-result-info hidden" id="reqResponseSuccess">
+                <div class="result__ready flex items-center gap-x-4">
                     <svg width="52" height="52" viewBox="0 0 52 52" fill="none"
                          xmlns="http://www.w3.org/2000/svg">
                         <circle cx="26" cy="26" r="25" stroke="#30BDFF" stroke-width="1.77"></circle>
@@ -370,14 +371,15 @@
                             </linearGradient>
                         </defs>
                     </svg>
-                    <h3>Demo horoscope is ready</h3>
+                    <h3 id="resMes"> horoscope is ready</h3>
                 </div>
             </div>
-            <div class="content__form-result-progress">
-                <progress value="0" max="100" class="progress-fill flex"></progress>
+            <div class="content__form-result-info hidden" id="reqResponseError">
+                <div class="result__ready flex items-center gap-x-4">
+                    <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="48px" height="48px"><path fill="#f44336" d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"/><path fill="#fff" d="M29.656,15.516l2.828,2.828l-14.14,14.14l-2.828-2.828L29.656,15.516z"/><path fill="#fff" d="M32.484,29.656l-2.828,2.828l-14.14-14.14l2.828-2.828L32.484,29.656z"/></svg>
+                    <h3 id="errorMsg">Something Wrong. Please Try again later</h3>
+                </div>
             </div>
-            <p class="loader_text">
-                Please wait a bit. We will compose your horoscope soon. </p>
         </div>
     </div>
 {{--    <div class="w-full flex justify-center items-center">--}}
