@@ -233,14 +233,10 @@
             <div id="screen_1" class="screen">
                 <div class="screen_content simple_form">
                     <div class="first_row">
-                        <img src="{{ asset('assets/form/img/capricorn.svg') }}" class="sign_img" alt="">
+                        <img src="{{ asset('assets/form/img/capricorn.svg') }}" class="sign_img" id="sign_img" alt="">
                     </div>
-                    <h2>Your sign is <span class="znak sign_name">Capricorn</span></h2>
-                    <p class="sign_txt">Capricorns are usually ambitious and are guided solely by the mind. They’re
-                        reserved, cold and incurably ordered, so they always control the situation and act
-                        judiciously, relying on common sense. At the same time, it’s difficult for Capricorns to
-                        understand their own and other people’s emotions, which may cause misunderstandings and
-                        discrepancies.</p>
+                    <h2>Your sign is <span class="znak sign_name" id="sign_name"></span></h2>
+                    <p class="sign_txt" id="sign_txt"></p>
                 </div>
                 <button type="button" class="next" data-event="Info">Next</button>
             </div>
