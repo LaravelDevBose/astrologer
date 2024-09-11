@@ -1,13 +1,15 @@
 <!doctype html>
 <html lang="en">
 <head>
-   @include('Front.includes.head')
+    @include('Front.includes.head')
+    @stack('customCss')
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" />
 </head>
 <body>
 
 {{--     @include('Front.includes.top_header')--}}
     <div class="w-11/12 mx-auto overflow-x-hidden">
-        @include('Front.includes.new_navbar')
+        @include('Front.includes.old_navbar')
     </div>
     <div class="kd-content" style="margin-top: 10rem; z-index: 1">
          @yield('content')

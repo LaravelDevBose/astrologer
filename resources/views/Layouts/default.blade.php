@@ -3,10 +3,11 @@
 <head>
     @include('Front.includes.head')
     @stack('customCss')
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" />
 </head>
 <body>
     <div class="w-11/12 mx-auto overflow-x-hidden">
-        @include('Front.includes.new_navbar')
+        @include('Front.includes.old_navbar')
     </div>
     <div class="kd-content" style="margin-top: 10rem">
     @yield('content')
@@ -19,13 +20,13 @@
         const closeBtn = document.querySelector(".close-btn");
 
         closeBtn.addEventListener("click", () => {
-            mobileNav.classList.toggle("hidden");
-            mobileNav.classList.toggle("block");
+            mobileNav.classList.toggle("d-none");
+            mobileNav.classList.toggle("show");
         });
 
         navBtn.addEventListener("click", () => {
-            mobileNav.classList.toggle("hidden");
-            mobileNav.classList.toggle("block");
+            mobileNav.classList.toggle("d-none");
+            mobileNav.classList.toggle("show");
         });
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

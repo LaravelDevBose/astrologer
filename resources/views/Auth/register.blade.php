@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="loginContainer contanier-fluid">
+<div class="loginContainer contanier-fluid" style="color: black">
 
 <!-- <div id='stars'></div>
 <div id='stars2'></div>
@@ -89,7 +89,7 @@
 
                        <div class="form-group mb-3 ">
                     
-                           <a href="login.html" class="font-16-500 text-start text-white text-decoration-none font-1">Already have account? <span class="text-decoration-underline  font-18-400">Login</span></a>
+                           <a href="login.html" class="font-16-500 text-start text-decoration-none font-1">Already have account? <span class="text-decoration-underline  font-18-400">Login</span></a>
                        </div>
    
                    </form>

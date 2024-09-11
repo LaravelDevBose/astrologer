@@ -180,15 +180,38 @@ body {
 .kd-navbar .links a {
   text-transform: uppercase;
   color: #fff;
-  font-size: 1rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
   padding: 0.5rem 0.7rem;
   margin: 0 0.2rem;
+  font-family: "Inria Sans", sans-serif;
+  font-weight: 500;
 }
 
+.mobile-nav a {
+  text-transform: uppercase;
+  margin: 0 0.2rem;
+  text-decoration: none;
+  padding: 1rem !important;
+  font-family: "Inria Sans", sans-serif;
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  color: #000;
+}
+
+
 .kd-navbar .links a.active,
-.kd-navbar .links a:hover {
+.kd-navbar .links a:hover,
+.mobile-nav .links a.active,
+.mobile-nav .links a:hover{
   border: 1.5px solid #fff;
-  border-radius: 30px;
+  border-radius: 30px !important;
+  padding: 1rem !important;
+  font-family: "Inria Sans", sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
 }
 
 .kd-navbar .links {
@@ -198,12 +221,6 @@ body {
 
 .kd-navbar .links a {
   text-decoration: none;
-}
-
-@media (max-width: 1300px) {
-  .kd-navbar {
-    display: none;
-  }
 }
 
 /* NAVBAR */
@@ -217,16 +234,15 @@ body {
   top: 0;
   left: 0;
   width: 100vw;
-  z-index: 10;
-  min-width: 320px;
+  height: 100vh; /* Ensure it takes up the full height */
+  z-index: 9999;
+  min-width: 320px; /* Minimum width */
   overflow-x: hidden;
+  transform: translateX(-100%); /* Initially hide it offscreen */
+  transition: transform 0.3s ease; /* Smooth transition */
 }
-
-.mobile-nav a {
-  text-transform: uppercase;
-  font-size: 0.8rem;
-  margin: 0 0.2rem;
-  text-decoration: none;
+.mobile-nav.show {
+  transform: translateX(0); /* Slide in from the left */
 }
 
 .mob-nav-top {
@@ -245,11 +261,12 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 1rem;
-  padding-bottom: 10px;
+  padding: .5rem 1rem;
+  border: 2px solid #fff;
+  border-radius: 999px;
 }
 
-.mob-nav-bottom img {
+.mob-nav-bottom i {
   width: 100%;
   height: auto;
   max-width: 180px;
@@ -315,8 +332,25 @@ body {
 }
 
 @media (min-width: 1300px) {
-  .mobile-nav {
+  .mobile-nav,
+  .mobile-navbar {
     display: none;
+  }
+}
+
+/* Hide mobile nav on large devices */
+@media (min-width: 992px) { /* Bootstrap's large devices breakpoint */
+  .mobile-nav,
+  .mobile-navbar {
+    display: none;
+  }
+}
+
+/* Show mobile nav on small devices */
+@media (max-width: 991px) { /* Bootstrap's medium devices breakpoint */
+  .mobile-nav,
+  .mobile-navbar {
+    display: flex; /* Ensure it is displayed on small devices */
   }
 }
 /* MOBILE NAV */

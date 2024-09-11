@@ -15,54 +15,40 @@
 </div>
 
 <!-- MOBILE NAV -->
-<div class="mobile-nav">
-    <div class="mob-nav-top">
-        <div class="links">
-            <a href="{{$data['header']->facebooklink}}">
-                <i class="fa-brands fa-facebook"></i>
-            </a>
-            <a href="{{$data['header']->youtube}}">
-                <i class="fa-brands fa-youtube"></i>
-            </a>
-            <a href="{{$data['header']->instagram}}">
-                <i class="fa-brands fa-instagram"></i>
-            </a>
-        </div>
-        <div class="links">
-            <a href="{{route('aboutus')}}" class="{{ request()->routeIs('aboutus')? 'active': '' }}">About us</a>
-            <a href="{{route('contact')}}" class="{{ request()->routeIs('contact')? 'active': '' }}">Contact us</a>
+<nav class="mobile-navbar align-items-center justify-content-between py-3 px-2 w-100 fixed-top text-white shadow-sm z-index-2 bg-gradient-custom">
+    <div>
+        <img src="{{ asset('assets/logo.png') }}" alt="logo" style="max-height: 60px; user-select: none; -webkit-user-drag: none" />
+    </div>
+    <div>
+        <button id="mob-nav-btn" class="mob-nav-bottom" style="background: transparent;">
+            <i class="fas fa-bars text-light"></i>
+        </button>
+    </div>
+</nav>
 
-            <a href="{{route('login')}}" class="{{ request()->routeIs('login')? 'active': '' }}">Login</a>
-        </div>
+<div class="mobile-nav bg-light text-dark d-none" id="mobile-nav">
+    <div class="position-absolute top-0 end-0 p-3 close-btn" >
+        <button class="btn btn-light btn-sm rounded-pill py-2 px-3" style="border: 2px solid #e5e7eb; border-radius: 9999px;">
+            <i class="fas fa-times text-dark"></i>
+        </button>
     </div>
-    <div class="mob-nav-bottom">
-        <div>
-            <img src="{{ asset('assets/logo.png') }}" alt="logo" srcset="" />
-        </div>
-        <div>
-            <button id="mob-nav-btn">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
-    </div>
-</div>
-<div style="position: absolute; top: 0; left: 0;  width: 100%;  height: 100vh; overflow-x: hidden;">
-    <div class="kd-mobile-nav" id="mobile-nav">
-        <div class="kd-mobile-nav-links">
-            <div class="close-btn"> <button>  <i class="fas fa-times"></i> </button> </div>
-            <a href="{{ route('index') }}" class="{{ request()->routeIs('index')? 'active': '' }}">Home</a>
-            <a href="{{ route('horoscope.index') }}" class="{{ request()->routeIs('horoscope.index')? 'active': '' }}">Horoscope</a>
-            <a href="{{ route('Articles', ['slug'=>'All']) }}" class="{{ request()->routeIs('Articles')? 'active': '' }}">Articles</a>
-            <a href="{{ route('astrology-calendar', ['month'=> 'January']) }}" class="{{ request()->routeIs('astrology-calendar')? 'active': '' }}">Astrology</a>
-        </div>
+    <div class="d-flex flex-column align-items-center justify-content-center h-100 w-75 mx-auto mt-3 gap-3 links">
+        <a href="{{ route('index') }}" class=" {{ request()->routeIs('index')? 'active': '' }}">Home</a>
+        <a href="{{ route('horoscope.index') }}" class=" {{ request()->routeIs('horoscope.index')? 'active': '' }}">Horoscope</a>
+        <a href="{{ route('Articles', ['slug'=>'All']) }}" class=" {{ request()->routeIs('Articles')? 'active': '' }}">Articles</a>
+        <a href="{{ route('astrology-calendar', ['month'=> 'January']) }}" class=" {{ request()->routeIs('astrology-calendar')? 'active': '' }}">Astrology</a>
+        <a href="{{ route('aboutus') }}" class=" {{ request()->routeIs('aboutus')? 'active': '' }}">About us</a>
+        <a href="{{ route('contact') }}" class=" {{ request()->routeIs('contact')? 'active': '' }}">Contact us</a>
+        <a href="{{ route('login') }}" class=" {{ request()->routeIs('login')? 'active': '' }}">Login</a>
     </div>
 </div>
+
 <!-- MOBILE NAV -->
 <!-- NAVBAR -->
 <div class="kd-navbar">
     <div>
         <a href="{{ route('index') }}">
-            <img src="{{ asset('assets/logo.png') }}" alt="logo" srcset="" style="
+            <img class="kv-logo" src="{{ asset('assets/logo.png') }}" alt="logo" srcset="" style="
               max-height: 100px;
               user-select: none;
               -webkit-user-drag: none;

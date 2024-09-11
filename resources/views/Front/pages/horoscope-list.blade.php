@@ -1,4 +1,7 @@
 @extends('Layouts.default')
+@push('customCss')
+    <script src="https://cdn.tailwindcss.com"></script>
+@endpush
 @section('content')
 
     <div class="w-11/12 mx-auto overflow-x-hidden">
@@ -9,7 +12,7 @@
                 <div class="mt-20 lg:mt-24 grid md:grid-cols-2 lg:grid-cols-4 gap-x-12 gap-y-10 w-full" >
                     @foreach($zodics as $zodicName => $zodiac)
                         <a href="{{route('horescope',['name'=>$zodicName])}}?action=today" class="flex items-center justify-center zod-sign">
-                            <img src="{{ asset('assets/reading_signs/'.$zodiac['images']) }}" alt="{{ $zodicName }}" />
+                            <img src="{{ asset('assets/zodiac_signs/'.$zodiac['images']) }}" alt="{{ $zodicName }}" />
                             <div class="text-start ms-4">
                                 <h2 class="text-xl font-header ">{{ strtoupper($zodicName) }}</h2>
                                 <p class=" font-header">{{ $zodiac['date'] }}</p>
