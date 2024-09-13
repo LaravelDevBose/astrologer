@@ -183,7 +183,7 @@ body {
   font-size: 1.125rem;
   line-height: 1.75rem;
   padding: 0.5rem 0.7rem;
-  margin: 0 0.2rem;
+  /*margin: 0 0.2rem;*/
   font-family: "Inria Sans", sans-serif;
   font-weight: 500;
 }
@@ -331,28 +331,6 @@ body {
   transform: translateX(0);
 }
 
-@media (min-width: 1300px) {
-  .mobile-nav,
-  .mobile-navbar {
-    display: none;
-  }
-}
-
-/* Hide mobile nav on large devices */
-@media (min-width: 992px) { /* Bootstrap's large devices breakpoint */
-  .mobile-nav,
-  .mobile-navbar {
-    display: none;
-  }
-}
-
-/* Show mobile nav on small devices */
-@media (max-width: 991px) { /* Bootstrap's medium devices breakpoint */
-  .mobile-nav,
-  .mobile-navbar {
-    display: flex; /* Ensure it is displayed on small devices */
-  }
-}
 /* MOBILE NAV */
 
 .horo-form input,
@@ -479,24 +457,6 @@ body {
   }
 }
 
-@media (max-width: 1028px) {
-  .hero .welcome-text {
-    font-size: 8vw;
-  }
-  .hero .welcome-text span {
-    font-size: 10vw;
-  }
-  .hero .welcome-text span.com {
-    font-size: 3vw;
-  }
-  .hero {
-    margin-top: 6rem;
-  }
-  .welcome-text {
-    line-height: 1.4cm !important;
-  }
-}
-
 @media (min-width: 1024px) {
   .hero {
     height: 100vh;
@@ -543,3 +503,82 @@ body {
   );
   border-radius: 0 0 20px 20px;
 }
+
+
+/* Hide mobile nav on large devices */
+@media (min-width: 992px ) { /* Bootstrap's large devices breakpoint */
+  .mobile-nav,
+  .mobile-navbar {
+    display: none;
+  }
+  .kd-navbar{
+    display: flex;
+  }
+}
+
+/* Show mobile nav on small devices */
+@media (max-width: 991px) { /* Bootstrap's medium devices breakpoint */
+  .mobile-nav,
+  .mobile-navbar {
+    display: flex; /* Ensure it is displayed on small devices */
+  }
+  .kd-navbar{
+    display: none;
+  }
+
+  .hero .welcome-text {
+    font-size: 5vw;
+  }
+  .hero .welcome-text span {
+    font-size: 7vw;
+  }
+  .hero .welcome-text span.com {
+    font-size: 2vw;
+  }
+  .hero {
+    margin-top: 6rem;
+  }
+  .welcome-text {
+    line-height: 1.4cm !important;
+  }
+}
+
+/* Apply styles for viewports between 992px and 1199px */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+  .navbar .links a,
+  .kd-navbar .links a {
+    font-size: .8rem;
+    line-height: .8rem;
+    margin: 0;
+  }
+
+  .navbar .links a.active, .navbar .links a:hover,
+  .kd-navbar .links a.active, .kd-navbar .links a:hover, .mobile-nav .links a.active, .mobile-nav .links a:hover {
+    padding: .7rem !important;
+    font-size: .8rem;
+    line-height: .8rem;
+  }
+
+  .logo,
+  .kv-logo{
+    width: 80%;
+  }
+
+  .hero .welcome-text {
+    font-size: 4vw;
+  }
+  .hero .welcome-text span {
+    font-size: 7vw;
+  }
+  .hero .welcome-text span.com {
+    font-size: 2vw;
+  }
+  .hero {
+    margin-top: 6rem;
+  }
+  .welcome-text {
+    line-height: 1.4cm !important;
+  }
+}
+

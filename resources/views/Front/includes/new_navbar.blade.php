@@ -3,7 +3,7 @@
 <!-- MOBILE NAV -->
 <div class="flex items-center justify-between py-4 px-2 w-full lg:hidden fixed top-0 left-0 bg-black z-2 bg-gradient-custom">
     <div>
-        <img src="{{ asset('assets/logo.png') }}" alt="logo" srcset="" style="max-height: 60px; user-select: none; -webkit-user-drag: none" />
+        <img src="{{ asset('assets/logo.png') }}" alt="logo"  srcset="" style="max-height: 60px; user-select: none; -webkit-user-drag: none" />
     </div>
     <div>
         <button id="mob-nav-btn" class="text-white text-lg font-medium px-4 py-1 rounded transition duration-300 ease-in-out font-light" >
@@ -34,7 +34,7 @@
 <div class="navbar lg:flex items-center justify-between py-4 w-11/12 hidden lg:block">
     <div>
         <a href="{{ route('index') }}">
-            <img src="{{ asset('assets/logo.png') }}" alt="logo" srcset="" style="
+            <img src="{{ asset('assets/logo.png') }}" alt="logo" class="logo" srcset="" style="
               max-height: 100px;
               user-select: none;
               -webkit-user-drag: none;

@@ -46,7 +46,7 @@
                     Destiny.”
                 </p>
                 <a href="{{ route('horoscope.reading') }}">
-                    <button class="reading-btn mt-10">
+                    <button class="reading-btn mt-10 ml-3">
                         GET YOUR FREE READING NOW!
                     </button>
                 </a>
